@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/logo/burger.png" type="image/x-icon">
+    <title>Burger - Landing Page</title>
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/media-queries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="logo">
+                <img src="/assets/images/logo/burger.png" alt="Imagem da logo">
+                <a href="#" class="logo__name">Burger</a>
+            </div>
+            <div class="menu" id="menuNavigation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+                </svg>
+            </div>
+            <ul class="navlinks" id="menu">
+                <li>
+                    <a href="#inicio" class="navlinks__link">Início</a>
+                </li>
+                <li>
+                    <a href="#menu-food" class="navlinks__link">Menu</a>
+                </li>
+                <li>
+                    <a href="#delivery" class="navlinks__link">Delivery</a>
+                </li>
+                <li>
+                    <a href="#avaliacoes" class="navlinks__link">Avaliações</a>
+                </li>
+                <li>
+                    <a href="#contato" class="navlinks__link">Contato</a>
+                </li>
+                <div class="searchBox">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="navbar__icons__menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <path d="M3.87289 17.0194L2.66933 9.83981C2.48735 8.75428 2.39637 8.21152 2.68773 7.85576C2.9791 7.5 3.51461 7.5 4.58564 7.5H19.4144C20.4854 7.5 21.0209 7.5 21.3123 7.85576C21.6036 8.21152 21.5126 8.75428 21.3307 9.83981L20.1271 17.0194C19.7282 19.3991 19.5287 20.5889 18.7143 21.2945C17.9 22 16.726 22 14.3782 22H9.62182C7.27396 22 6.10003 22 5.28565 21.2945C4.47127 20.5889 4.27181 19.3991 3.87289 17.0194Z" stroke="currentColor" stroke-width="1.5" />
+                        <path d="M17.5 7.5C17.5 4.46243 15.0376 2 12 2C8.96243 2 6.5 4.46243 6.5 7.5" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                </div>
+                <div class="close" id="closeMenu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path>
+                    </svg>
+                </div>
+            </ul>
+            <div class="navbar__icons">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                    <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                    <path d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                    <path d="M3.87289 17.0194L2.66933 9.83981C2.48735 8.75428 2.39637 8.21152 2.68773 7.85576C2.9791 7.5 3.51461 7.5 4.58564 7.5H19.4144C20.4854 7.5 21.0209 7.5 21.3123 7.85576C21.6036 8.21152 21.5126 8.75428 21.3307 9.83981L20.1271 17.0194C19.7282 19.3991 19.5287 20.5889 18.7143 21.2945C17.9 22 16.726 22 14.3782 22H9.62182C7.27396 22 6.10003 22 5.28565 21.2945C4.47127 20.5889 4.27181 19.3991 3.87289 17.0194Z" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M17.5 7.5C17.5 4.46243 15.0376 2 12 2C8.96243 2 6.5 4.46243 6.5 7.5" stroke="currentColor" stroke-width="1.5" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero__burger" id="inicio">
+        <div class="hero__burger__container">
+            <div class="hero__burger__content">
+                <h2 class="title"><span>Comida especial</span> sempre para você</h2>
+                <p class="paragraph">Os melhores cozinheiros e os melhores entregadores, todos a seu serviço. Comida quente e saborosa chegará até você em 60 minutos</p>
+            </div>
+            <img src="/assets/images/main/fast-food.png" alt="Imagem de fast food" class="hero__burger__image">
+        </div>
+    </main>
+
+    <section class="menu" id="menu-food">
+        <div class="menu__box">
+            <h2 class="title">Nossa comida incrível</h2>
+            <p class="paragraph">Quer uma refeição deliciosa, mas não temos tempo para entregá-la quente e saborosa. Os amantes da gastronomia vão adorar nossa comida.</p>
+        </div>
+        <div class="menu__card__container">
+            <div class="menu__card">
+                <img src="/assets/images/hamburgers/hamburger.jpg" alt="Hamburger" class="menu__card__image">
+                <div class="menu__card__content">
+                    <h2 class="title__card">Hamburger tradicional</h2>
+                    <p class="paragraph__card">Carne, bacon, queijo, alface e tomate</p>
+                </div>
+                <div class="menu__card__buy">
+                    <span class="price">R$ 12,00</span>
+                    <div class="buy__inner">
+                        <a href="#" class="button__buy">Comprar</a>
+                        <i class='bx bx-heart'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__card">
+                <img src="/assets/images/hamburgers/x-tudo.png" alt="x-tudo" class="menu__card__image">
+                <div class="menu__card__content">
+                    <h2 class="title__card">X-tudo</h2>
+                    <p class="paragraph__card">Presunto, queijo, bacon, ovo frito, alface e tomate</p>
+                </div>
+                <div class="menu__card__buy">
+                    <span class="price">R$ 20,00</span>
+                    <div class="buy__inner">
+                        <a href="#" class="button__buy">Comprar</a>
+                        <i class='bx bx-heart'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__card">
+                <img src="/assets/images/hamburgers/x-salada.png" alt="x-salada" class="menu__card__image">
+                <div class="menu__card__content">
+                    <h2 class="title__card">X-salada</h2>
+                    <p class="paragraph__card">Carne, queijo, alface, tomate e cebola</p>
+                </div>
+                <div class="menu__card__buy">
+                    <span class="price">R$ 10,00</span>
+                    <div class="buy__inner">
+                        <a href="#" class="button__buy">Comprar</a>
+                        <i class='bx bx-heart'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__card">
+                <img src="/assets/images/batata-frita/batata-frita.png" alt="Batata frita" class="menu__card__image">
+                <div class="menu__card__content">
+                    <h2 class="title__card">Batata frita</h2>
+                    <p class="paragraph__card">Acompanhado com molho</p>
+                </div>
+                <div class="menu__card__buy">
+                    <span class="price">R$ 8,00</span>
+                    <div class="buy__inner">
+                        <a href="#" class="button__buy">Comprar</a>
+                        <i class='bx bx-heart'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__card">
+                <img src="/assets/images/sodas/sodas.png" alt="Refrigerantes" class="menu__card__image">
+                <div class="menu__card__content">
+                    <h2 class="title__card">Refrigerantes</h2>
+                    <p class="paragraph__card">Garafa ou em lata, 200ml, 1l e 2l</p>
+                </div>
+                <div class="menu__card__buy">
+                    <span class="price">R$ 5,00</span>
+                    <div class="buy__inner">
+                        <a href="#" class="button__buy">Comprar</a>
+                        <i class='bx bx-heart'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="carousel">
+        <div class="swiper-container carousel-burger">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="carousel__burger__content">
+                        <div class="box">
+                            <h2>Menus populares</h2>
+                            <h1>Hambúrguer</h1>
+                            <p>Alface com legumes e queijo</p>
+                            <a href="#">Peça agora</a>
+                            <span>R$ 12,00</span>
+                        </div>
+                        <img src="/assets/images/carousel/hamburger-slider.png" alt="Hamburger">
+                    </div>
+                    <div class="background"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carousel__burger__content">
+                        <div class="box">
+                            <h2>Menus populares</h2>
+                            <h1>X-tudo</h1>
+                            <p>Presunto, queijo, bacon, ovo frito, alface e tomate</p>
+                            <a href="#">Peça agora</a>
+                            <span>R$ 20,00</span>
+                        </div>
+                        <img class="image__food" src="/assets/images/carousel/x-tudo.png" alt="X-tudo">
+                    </div>
+                    <div class="background"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="carousel__burger__content">
+                        <div class="box">
+                            <h2>Menus populares</h2>
+                            <h1>Batata frita</h1>
+                            <p>Acompanhado com molho</p>
+                            <a href="#">Peça agora</a>
+                            <span>R$ 8,00</span>
+                        </div>
+                        <img class="image__food fritas" src="/assets/images/carousel/batata-frita.png" alt="Batata frita">
+                    </div>
+                    <div class="background"></div>
+                </div>
+            </div>
+            <div class="carousel__arrow carousel__prev carouselPrev-btn">
+                <svg class="prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path>
+                </svg>
+            </div>
+            <div class="carousel__arrow carousel__next carouselNext-btn">
+                <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="swiper-container carousel-burger-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/assets/images/carousel/thumbnail/hamburger-thumb.png" alt="Hamburger">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/carousel/thumbnail/x-tudo-thumb.png" alt="X-tudo">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/assets/images/carousel/thumbnail/batata-frita-thumb.png" alt="Batata frita">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="delivery" id="delivery">
+        <h2 class="title">Delivery</h2>
+        <img src="/assets/images/app.png" alt="Imagem do aplicativo">
+    </section>
+
+    <section class="review" id="avaliacoes">
+        <h2 class="title">Avaliações</h2>
+        <div class="swiper-container carousel-review">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="image">
+                            <img src="/assets/images/review/fernanda.jpg" alt="Perfil da Fernanda">
+                        </div>
+                        <h2 class="name">Fernanda</h2>
+                        <p class="paragraph-review">Atendimento ótimo, pessoas simpáticas e com muita disposição para explicar cada detalhe do cardápio. Hambúrguer, batata e maionese maravilhosa. O capricho em servir, o cuidado e a preocupação com o cliente em não se sujar (servido luvinhas para comer tranquilamente com as mãos). Ingredientes de muita qualidade. Ambiente limpo, super agradável e aconchegante. Realmente vimos muito amor na hamburgueria. Parabéns!</p>
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="image">
+                            <img src="/assets/images/review/lucas.jpg" alt="Perfil do Lucas">
+                        </div>
+                        <h2 class="name">Lucas</h2>
+                        <p class="paragraph-review">O local é muito atrativo, aconchegante e limpo. Uma boa decoração e ótima música ambiente, tudo contribuindo para o conforto.
+                            Atendimento excelente. O lanche é delicioso. Hamburger suculento no ponto certo. A batata também é uma delícia, e a maionese é ainda melhor. Tudo isso por um preço ótimo.</p>
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="image">
+                            <img src="/assets/images/review/ana.jpg" alt="Perfil do Ana">
+                        </div>
+                        <h2 class="name">Ana</h2>
+                        <p class="paragraph-review">Maravilhoso e ótimo atendimento os lanches são perfeitos e a opção de montar o lanche que é muito boa, realmente algo inovador. Lanche de qualidade e muito saboroso. Parabéns!</p>
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="image">
+                            <img src="/assets/images/review/marcelo.jpg" alt="Perfil do Marcelo">
+                        </div>
+                        <h2 class="name">Marcelo</h2>
+                        <p class="paragraph-review">Atendimento excelente. Funcionários muito simpáticos, extremamente solícitos e dispostos a ajudar na sua escolha do lanche. Rapidez, eficiência e muito saboroso. Parabéns!</p>
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="image">
+                            <img src="/assets/images/review/beatriz.jpg" alt="Perfil do Beatriz">
+                        </div>
+                        <h2 class="name">Beatriz</h2>
+                        <p class="paragraph-review">Uma delícia como sempre, lanche e batata maravilhosos, funcionários muito simpáticos e atenciosos. Super recomendo. Atendimento excelente ao cliente e comida de ótima qualidade. Parabéns!</p>
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content">
+                        <div class="image">
+                            <img src="/assets/images/review/gustavo.jpg" alt="Perfil do Gustavo">
+                        </div>
+                        <h2 class="name">Gustavo</h2>
+                        <p class="paragraph-review">Lanche excelente, chegou perfeito e bem rapido. Sempre peço do mesmo lugar e pra mim, é a melhor hamburgueria. Top demais!</p>
+                        <div class="stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-Review__arrow carouselReview__prev carouselReviewPrev-btn">
+                <svg class="arrow-prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"></path>
+                </svg>
+            </div>
+            <div class="carousel-Review__arrow carouselReview__next carouselReviewNext-btn">
+                <svg class="arrow-next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer__container">
+            <div class="logo__footer">
+                <img src="/assets/images/logo/burger.png" alt="Imagem da logo">
+                <a href="#" class="logo__name">Burger</a>
+            </div>
+            <form action="#">
+                <div class="inputBox">
+                    <input type="text" placeholder="Email">
+                    <button type="submit">
+                        Enviar
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3.5 1.34558C3.58425 1.34558 3.66714 1.36687 3.74096 1.40747L22.2034 11.5618C22.4454 11.6949 22.5337 11.9989 22.4006 12.2409C22.3549 12.324 22.2865 12.3924 22.2034 12.4381L3.74096 22.5924C3.499 22.7255 3.19497 22.6372 3.06189 22.3953C3.02129 22.3214 3 22.2386 3 22.1543V1.84558C3 1.56944 3.22386 1.34558 3.5 1.34558ZM5 4.38249V10.9999H10V12.9999H5V19.6174L18.8499 11.9999L5 4.38249Z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="footer__wrapper">
+            <div class="socials">
+                <a href="#" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z"></path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 16.9913 5.65783 21.1283 10.4385 21.8785V14.8906H7.89941V12H10.4385V9.79688C10.4385 7.29063 11.9314 5.90625 14.2156 5.90625C15.3097 5.90625 16.4541 6.10156 16.4541 6.10156V8.5625H15.1931C13.9509 8.5625 13.5635 9.33334 13.5635 10.1242V12H16.3369L15.8936 14.8906H13.5635V21.8785C18.3441 21.1283 22.001 16.9913 22.001 12C22.001 6.47715 17.5238 2 12.001 2Z"></path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 8.24537V15.5C16 19.0899 13.0899 22 9.5 22C5.91015 22 3 19.0899 3 15.5C3 11.9101 5.91015 9 9.5 9C10.0163 9 10.5185 9.06019 11 9.17393V12.3368C10.5454 12.1208 10.0368 12 9.5 12C7.567 12 6 13.567 6 15.5C6 17.433 7.567 19 9.5 19C11.433 19 13 17.433 13 15.5V2H16C16 4.76142 18.2386 7 21 7V10C19.1081 10 17.3696 9.34328 16 8.24537Z"></path>
+                    </svg>
+                </a>
+            </div>
+            <span class="copyright">&copy; Burger 2024</span>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="/assets/scripts/script.js"></script>
+</body>
+</html>

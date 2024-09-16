@@ -1,0 +1,196 @@
+@media screen and (max-width: 1024px) {
+    .navbar nav .logo{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar{
+        padding: 10px 25px;
+    }
+
+    .navbar nav{
+        justify-content: space-between;
+    }
+
+    .navbar nav .logo{
+        margin-left: 40px;
+        font-size: 25px;
+    }
+
+    .navbar nav .navlinks{
+        display: none;
+    }
+
+    nav .menu{
+        left: 20px;
+        display: flex;
+    }
+
+    #menu{
+        position: fixed;
+        top: 0;
+        left: -500px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        max-width: 280px;
+        min-height: 100vh;
+        background: #1f1f1f;
+        padding: 100px 20px;
+        transition: .35s;
+        z-index: 100;
+    }
+
+    #menu.active{
+        left: 0;
+    }
+
+    #menu .navlinks__link{
+        font-size: 1.5rem;
+        color: var(--white);
+    }
+
+    #menu .searchBox, .navbar__icons__menu{
+        display: none;
+    }
+
+    #menu .close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+    }
+
+    .close svg{
+        width: 40px;
+        height: 40px;
+        color: var(--white);
+    }
+}
+
+@media screen and (max-width: 375px){
+    .navbar nav{
+        justify-content: center;
+    }
+
+    .navbar nav .logo{
+        margin-left: 0;
+    }
+
+    .navbar nav .navbar__icons{
+        display: none;
+    }
+    
+    #menu .searchBox{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: block;
+    }
+    
+    .searchBox svg{
+        width: 30px;
+        height: 30px;
+        color: var(--white);
+    }
+
+    #menu .navbar__icons__menu{
+        display: flex;
+        gap: 1rem;
+        color: var(--white);
+    }
+
+    #menu .navbar__icons__menu svg{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero__burger__container{
+        padding: 20px 30px;
+    }
+
+    .hero__burger__container .hero__burger__image{
+        max-width: 550px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero__burger__container{
+        flex-direction: column;
+        padding: 120px 1rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .carousel-burger .swiper-slide{
+        height: 600px;
+    }
+
+    .carousel__burger__content{
+        position: relative;
+        padding: 20px;
+    }
+
+    .carousel__burger__content .box{
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .carousel__burger__content :is(h2, h1, p, a, span){
+        top: 0;
+        left: 0;
+    }
+
+    .carousel__burger__content h1{
+        max-width: 500px;
+        font-size: 50px;
+    }
+
+    .carousel__burger__content h2, h1{
+        margin-bottom: 5px;
+    }
+
+    .carousel__burger__content p{
+        font-size: 20px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .carousel__burger__content span{
+        margin-top: 20px;
+    }
+
+    .carousel__burger__content img{
+        top: 30px;
+        left: 0;
+    }
+
+    .carousel__burger__content .image__food{
+        top: -25px;
+        left: 0;
+        max-width: 300px;
+    }
+
+    .carousel__burger__content .fritas{
+        max-width: 380px;
+    }
+
+    .background{
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .carousel-Review__arrow{
+        top: 30%;
+    }
+}
