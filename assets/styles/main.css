@@ -3,6 +3,7 @@
 :root{
     --white: #f5f5f5;
     --black: #000;
+    --color-primary: #FCB800;
 }
 
 *{
@@ -40,9 +41,10 @@ ul, li{
 
 .navbar.sticky{
     background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.327) 0 1px 4px;
 }
 
-.navbar.sticky nav :is(.logo__name, .navlinks__link, .navbar__icons svg, .menu svg){
+.navbar.sticky nav :is(.logo__name, .navlinks__link, .navbar__icons div i, .menu svg){
     color: var(--black);
 }
 
@@ -92,16 +94,300 @@ nav .navlinks{
     color: #adadad;
 }
 
-nav .navbar__icons{
-    display: flex;
-    gap: 25px;
+.navlinks .close{
+    display: none;
 }
 
-nav .navbar__icons svg{
-    width: 24px;
-    height: 24px;
+nav .navbar__icons{
+    display: flex;
+    gap: 1rem;
+}
+
+nav .navbar__icons div :is(.search-icon, .bag-icon){
+    font-size: 26px;
     color: var(--white);
     cursor: pointer;
+}
+
+.icons__menu{
+    display: none;
+}
+
+.searchBox__menu{
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    display: none;
+}
+
+.search__wrapper{
+    position: relative;
+    left: 150px;
+}
+
+.search__container{
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s ease-in-out;
+}
+
+.search__container.active{
+    top: 40px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.search__container .search{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #fcb900ee;
+    padding: 3px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.search input{
+    border: none;
+    outline: none;
+    width: 240px;
+    height: 35px;
+    padding: 0 5px;
+    color: #404040;
+    font-size: .9rem;
+    font-weight: 400;
+    padding-right: 35px;
+}
+
+input::placeholder{
+    color: #808080;
+}
+
+.btn-search{
+    border: none;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    right: 8px;
+    display: flex;
+}
+
+.btn-search svg{
+    width: 22px;
+    height: 22px;
+    color: var(--black);
+    cursor: pointer;
+    transition: .35s ease-in-out;
+}
+
+.btn-search svg:hover{
+    color: #eeb20c;
+}
+
+
+
+/* == Bag - Sacola == */
+.bag__container{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    background: #fafafa;
+    padding: 1rem;
+    width: 450px;
+    border-radius: 10px;
+    overflow-y: auto;
+    min-height: 220px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s ease-in-out;
+}
+
+.bag__wrapper{
+    transform: translate(20px);
+}
+
+.bag__container.active{
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.bag__container .bag__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bag__header .title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.bag__header .close-icon{
+    width: 28px;
+    height: 28px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.bag__card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    margin: 20px auto;
+    padding: 10px 8px;
+    border-left: 3px solid #eeb20c;
+    background: #ffe08a;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.bag__card .image__product img{
+    width: 100%;
+    max-width: 90px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.bag__card__content{
+    display: flex;
+    flex-direction: column;
+}
+
+.bag__card__content .title__product{
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.bag__card__content .paragraph__product{
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.bag__card__content .price__product{
+    color: var(--black);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.icon-check{
+    width: 30px;
+    height: 30px;
+    color: #007f00;
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease-in;
+}
+
+.icon-check.check-active{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/* == Sacola Menu == */
+.bag__container__menu{
+    position: absolute;
+    top: 60px;
+    left: -200px;
+    transform: translateY(-15%);
+    background: #fafafa;
+    padding: 1rem;
+    width: 93%;
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 8px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    transition: .35s ease-in-out;
+}
+
+.bag__container__menu.active{
+    left: 8px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.bag__container__menu .bag__header__menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bag__header__menu .title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.bag__header__menu .close-icon__bag-menu{
+    width: 28px;
+    height: 28px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.bag__card__menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 20px auto;
+    padding: 10px 8px;
+    border-left: 3px solid #eeb20c;
+    background: #ffe08a;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.bag__card__menu .image__product img{
+    width: 100%;
+    max-width: 90px;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.bag__card__menu .bag__card__content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bag__card__content .price__product{
+    color: var(--black);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.icon-check__menu{
+    width: 30px;
+    height: 30px;
+    color: #007f00;
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease-in;
+}
+
+.icon-check__menu.check-active{
+    opacity: 1;
+    visibility: visible;
 }
 
 nav .menu{
@@ -114,10 +400,6 @@ nav .menu svg{
     height: 28px;
     color: var(--white);
     cursor: pointer;
-}
-
-.navlinks .searchBox, .navbar__icons__menu, .close{
-    display: none;
 }
 
 .hero__burger{
@@ -150,7 +432,7 @@ nav .menu svg{
 }
 
 .hero__burger__content .title span{
-    color: #FCB800;
+    color: var(--color-primary);
 }
 
 .hero__burger__content .paragraph{
@@ -257,13 +539,7 @@ nav .menu svg{
     font-weight: 600;
 }
 
-.menu__card__buy .buy__inner{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.buy__inner .button__buy{
+.menu__card__buy .button__buy{
     background: #02924f;
     color: var(--white);
     padding: 4px 10px;
@@ -272,20 +548,14 @@ nav .menu svg{
     transition: .35s;
 }
 
-.buy__inner .button__buy:hover{
+.menu__card__buy .button__buy:hover{
     background: #026637;
-}
-
-.menu__card__buy i{
-    cursor: pointer;
-    color: #ff0000;
-    font-size: 25px;
 }
 
 .carousel{
     width: 100%;
-    max-width: 800px;
-    margin: 40px auto;
+    max-width: 900px;
+    margin: 80px auto;
 }
 
 .carousel-burger{
@@ -309,56 +579,19 @@ nav .menu svg{
 .carousel__burger__content{
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5%;
 }
 
 .carousel__burger__content .box{
     position: relative;
-    left: 20px;
-}
-
-.swiper-slide-active .carousel__burger__content h2{
-    animation: animateText .65s both;
-    animation-delay: .25s;
-    -webkit-animation: animateText .65s both;
-    -webkit-animation-delay: .25s;
-}
-.swiper-slide-active .carousel__burger__content h1{
-    animation: animateText .65s both;
-    animation-delay: .85s;
-    -webkit-animation: animateText .65s both;
-    -webkit-animation-delay: .85s;
-}
-.swiper-slide-active .carousel__burger__content p{
-    animation: animateText .65s both;
-    animation-delay: 1s;
-    -webkit-animation: animateText .65s both;
-    -webkit-animation-delay: 1s;
-}
-.swiper-slide-active .carousel__burger__content a{
-    animation: animateText .65s both;
-    animation-delay: 1.5s;
-    -webkit-animation: animateText .65s both;
-    -webkit-animation-delay: 1.5s;
-}
-.swiper-slide-active .carousel__burger__content span{
-    animation: animateText .65s both;
-    animation-delay: 2s;
-    -webkit-animation: animateText .65s both;
-    -webkit-animation-delay: 2s;
-}
-.swiper-slide-active .carousel__burger__content img{
-    animation: animateImage .65s both;
-    animation-delay: 1.65s;
-    -webkit-animation: animateImage .65s both;
-    -webkit-animation-delay: 1.65s;
+    left: 0;
 }
 
 .carousel__burger__content h2{
     position: relative;
     top: 30px;
     left: 60px;
-    color: #FCB800;
+    color: var(--color-primary);
     font-size: 30px;
     font-weight: 600;
     opacity: 0;
@@ -410,7 +643,7 @@ nav .menu svg{
     border: 1px solid var(--white);
     color: var(--black);
     padding: 10px 15px;
-    border-radius: 10px;
+    border-radius: 6px;
     position: relative;
     top: 60px;
     left: 67px;
@@ -424,7 +657,7 @@ nav .menu svg{
 }
 
 .carousel__burger__content span{
-    color: #FCB800;
+    color: var(--color-primary);
     font-size: 30px;
     font-weight: 600;
     position: relative;
@@ -463,6 +696,87 @@ nav .menu svg{
 .carousel-burger-thumbs .swiper-slide img{
     width: auto;
     height: 100%;
+}
+
+.carousel__arrow{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: var(--color-primary);
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel__arrow:hover{
+    opacity: .6;
+}
+
+.carousel__arrow.swiper-button-disabled{
+    display: none;
+}
+
+.carousel__prev{
+    left: 20px;
+}
+
+.carousel__next{
+    right: 20px;
+}
+
+.carousel__arrow svg{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    color: var(--white);
+}
+
+.next{
+    position: absolute;
+    left: 2px;
+}
+
+.right{
+    position: absolute;
+    right: 2px;
+}
+
+.swiper-slide-active .carousel__burger__content h2{
+    animation: animateText .65s both;
+    animation-delay: .25s;
+    -webkit-animation: animateText .65s both;
+    -webkit-animation-delay: .25s;
+}
+.swiper-slide-active .carousel__burger__content h1{
+    animation: animateText .65s both;
+    animation-delay: .85s;
+    -webkit-animation: animateText .65s both;
+    -webkit-animation-delay: .85s;
+}
+.swiper-slide-active .carousel__burger__content p{
+    animation: animateText .65s both;
+    animation-delay: 1s;
+    -webkit-animation: animateText .65s both;
+    -webkit-animation-delay: 1s;
+}
+.swiper-slide-active .carousel__burger__content a{
+    animation: animateText .65s both;
+    animation-delay: 1.5s;
+    -webkit-animation: animateText .65s both;
+    -webkit-animation-delay: 1.5s;
+}
+.swiper-slide-active .carousel__burger__content span{
+    animation: animateText .65s both;
+    animation-delay: 2s;
+    -webkit-animation: animateText .65s both;
+    -webkit-animation-delay: 2s;
+}
+.swiper-slide-active .carousel__burger__content img{
+    animation: animateImage .65s both;
+    animation-delay: 1.65s;
+    -webkit-animation: animateImage .65s both;
+    -webkit-animation-delay: 1.65s;
 }
 
 @keyframes animateText {
@@ -507,68 +821,6 @@ nav .menu svg{
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.carousel__arrow{
-    display: flex;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    background: #FCB800;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.carousel__arrow:hover{
-    opacity: .6;
-}
-
-.carousel__arrow.swiper-button-disabled{
-    display: none;
-}
-
-.carousel__prev{
-    left: 20px;
-}
-
-.carousel__next{
-    right: 20px;
-}
-
-.carousel__arrow svg{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    color: var(--white);
-}
-
-.next{
-    position: absolute;
-    left: 2px;
-}
-
-.right{
-    position: absolute;
-    right: 2px;
-}
-
-.delivery{
-    position: relative;
-    padding: 50px 0;
-}
-
-.delivery .title{
-    text-align: center;
-    font-size: 35px;
-    font-weight: 600;
-    margin-bottom: 50px;
-}
-
-.delivery img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .review{
@@ -627,7 +879,7 @@ nav .menu svg{
 .content .stars svg{
     width: 20px;
     height: 20px;
-    color: #FCB800;
+    color: var(--color-primary);
 }
 
 .content .name{
@@ -644,7 +896,7 @@ nav .menu svg{
     position: absolute;
     top: 40%;
     transform: translate(0, -50%);
-    background: #FCB800;
+    background: var(--color-primary);
     border-radius: 50px;
     cursor: pointer;
     z-index: 10;
@@ -708,6 +960,7 @@ footer .footer__container{
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1100px;
 }
 
 .footer__container input{
@@ -716,52 +969,57 @@ footer .footer__container{
     width: 100%;
     padding: 8px 10px;
     border-radius: 2px;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .footer__container ::placeholder{
-    color: #adadad;
+    color: #707070;
+    font-size: 1rem;
     font-weight: 300;
 }
 
 .footer__container .inputBox{
     position: relative;
     display: flex;
-    width: 40%;
+    align-items: center;
+    width: 50%;
 }
 
 .inputBox button{
-    position: absolute;
-    top: 6px;
-    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: .5rem;
     border: none;
     outline: none;
-    background: #FCB800;
-    color: var(--black);
-    width: 80px;
-    height: 25px;
-    border-radius: 6px;
+    background: #ff3737;
+    color: var(--white);
+    width: 120px;
+    height: 41px;
+    margin-left: 5px;
+    font-size: 1rem;
+    border-radius: 2px;
     cursor: pointer;
     transition: 300ms ease-in-out;
 }
 
 .inputBox button svg{
-    width: 16px;
-    height: 16px;
-    color: var(--black);
+    width: 18px;
+    height: 18px;
+    color: var(--white);
 }
 
 .inputBox button:hover{
-    background: #fcb900ba;
+    background: #ff1212;
 }
 
 .footer__wrapper{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-top: 80px;
 }
 
